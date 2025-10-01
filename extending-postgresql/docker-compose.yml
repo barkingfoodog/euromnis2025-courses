@@ -1,0 +1,20 @@
+services:
+  db:
+    container_name: euromnis-2025-extending-postgresql
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: euromnis-2025-extending-postgresql
+    command: -c config_file=/etc/postgresql.conf
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=euromnis
+      - POSTGRES_DB=postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./postgresql.conf:/etc/postgresql.conf
+      # Uncomment below for persistent storage
+      # - euromnis-2025-extending-postgresql-pgdata:/var/lib/postgresql/data
+volumes:
+  euromnis-2025-extending-postgresql-pgdata:
