@@ -15,4 +15,10 @@ RUN set -eux \
 	&& make \
 	&& make install \
 	&& cd .. \
-	&& rm -rf pgsql-http*
+	&& rm -rf pgsql-http* \
+	&& apk del \
+	    clang19 \
+        g++ \
+        llvm19 \
+        make \
+        curl-dev

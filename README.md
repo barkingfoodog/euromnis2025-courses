@@ -8,7 +8,7 @@ Feel free to download and adapt this material to your needs.
 
 ## Extending PostgreSQL
 
-### Running
+### Building
 
 1. Install docker
 1. Clone this repo
@@ -18,7 +18,7 @@ Feel free to download and adapt this material to your needs.
 ### Stopping
 
 1. `cd` into `extending-postgresql`
-1. Run docker compose down
+1. Run `docker compose down`
 
 ### Connecting to PostgreSQL
 
